@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧠 NeuralVision Studio
+#  NeuralVision Studio
 ### Multi-Architecture Deep Learning Benchmark & Real-Time Handwritten Digit OCR Platform
 
 [![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
@@ -26,7 +26,7 @@
 
 </div>
 
-## 📌 Giới Thiệu Tổng Quan
+##  Giới Thiệu Tổng Quan
 
 **NeuralVision Studio** là một sản phẩm học sâu và thị giác máy tính hoàn chỉnh được thiết kế theo tiêu chuẩn sản xuất (production-ready). Dự án không chỉ dừng lại ở việc thực nghiệm mô hình trên Jupyter Notebook mà đã chuyển giao toàn diện thành một ứng dụng Full-Stack hiệu năng cao:
 
@@ -36,50 +36,50 @@
 
 ---
 
-## 🌟 Tính Năng Cốt Lõi
+##  Tính Năng Cốt Lõi
 
-### 1. ✍️ Studio Vẽ Tay Thời Gian Thực (Interactive Canvas)
+### 1.  Studio Vẽ Tay Thời Gian Thực (Interactive Canvas)
 * **Khử răng cưa & nội suy mượt mà:** Cọ vẽ khử rung bằng đường cong Bézier bậc hai, tùy chỉnh nét cọ, tẩy, hoàn tác (Undo), và xóa nhanh.
 * **Suy luận kép (Single & Compare All):**
   * Chế độ đơn: Dự đoán tức thì kèm thanh đo xác suất **Softmax 10 lớp** (0-9) có hoạt ảnh mượt mà.
-  * Chế độ **⚔️ So Sánh Cả 5 Mô Hình:** Đưa nét vẽ qua đồng thời cả 5 kiến trúc để đối sánh độ chính xác và độ trễ trên cùng 1 bảng.
+  * Chế độ ** So Sánh Cả 5 Mô Hình:** Đưa nét vẽ qua đồng thời cả 5 kiến trúc để đối sánh độ chính xác và độ trễ trên cùng 1 bảng.
 * **AI Receptive Field (28x28):** Cho phép người dùng quan sát trực tiếp ma trận điểm ảnh mà mạng nơ-ron nhìn thấy sau khi tiền xử lý trọng tâm.
 
-### 2. 📷 Quét Ảnh Tài Liệu & Nhận Diện Đa Chữ Số (OCR Document Scanner)
+### 2.  Quét Ảnh Tài Liệu & Nhận Diện Đa Chữ Số (OCR Document Scanner)
 * **Phát hiện vùng ký tự tự động (Contour Segmentation):** Bóc tách các chữ số riêng lẻ trên ảnh chụp tài liệu, hóa đơn, giấy thi, bài toán viết tay.
 * **Gắn thẻ Bounding Boxes phát sáng:** Vẽ hộp nhận diện màu sắc kèm nhãn dự đoán và % độ tin cậy trực tiếp lên ảnh gốc.
 * **Ghép chuỗi số tự động:** Nối các chữ số theo thứ tự đọc (ví dụ: bóc tách chính xác chuỗi `2 0 2 6` với độ tin cậy trung bình **97.66%**).
 * **1-Click Sample Testing:** Tích hợp sẵn các mẫu thử nhanh: `Số 7`, `Năm 2026`, `Chuỗi 8910`.
 
-### 3. 📹 Live Webcam Scanner (Quét Trực Tiếp Qua Camera)
+### 3.  Live Webcam Scanner (Quét Trực Tiếp Qua Camera)
 * Kết nối luồng video trực tiếp từ camera/webcam máy tính với khung ngắm ngắm trọng tâm.
 * Bắt khung hình và đưa qua bộ tiền xử lý OCR để nhận diện chữ số trên giấy trong tích tắc.
 
-### 4. 📊 Dashboard Đối Chuẩn Chuyên Sâu (Benchmark Hub)
+### 4.  Dashboard Đối Chuẩn Chuyên Sâu (Benchmark Hub)
 * Tích hợp biểu đồ tương tác **Chart.js**:
   * So sánh Test Accuracy (%) giữa 5 mô hình.
   * Phân tích Trade-off: Độ trễ suy luận (Latency) vs Độ chính xác (Accuracy).
 * Thẻ đánh giá chuyên sâu ưu điểm, nhược điểm, độ phức tạp tính toán và khuyến nghị môi trường triển khai thực tế.
 
-### 5. 📜 Quản Lý Lịch Sử & Xuất Báo Cáo (History & Export)
+### 5.  Quản Lý Lịch Sử & Xuất Báo Cáo (History & Export)
 * Lưu trữ tự động các lần nhận diện từ Canvas, OCR và Webcam vào LocalStorage.
 * Hỗ trợ xuất dữ liệu ra file **JSON** hoặc **CSV** phục vụ báo cáo đồ án, nghiên cứu khoa học.
 
 ---
 
-## 📊 Bảng Đối Chuẩn Kỹ Thuật (5 Kiến Trúc)
+##  Bảng Đối Chuẩn Kỹ Thuật (5 Kiến Trúc)
 
 Dữ liệu thực nghiệm thu được từ quá trình huấn luyện và đánh giá công bằng 6 epochs trên tập kiểm thử độc lập 10.000 ảnh MNIST:
 
 | Hạng | Tên Kiến Trúc Mạng | Test Accuracy (%) | Test Loss | Số Tham Số (Params) | Dung Lượng (MB) | Độ Trễ Suy Luận (CPU) | Thời Gian Train | Tỷ Lệ Lỗi (10k Mẫu) |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 🥇 **1** | **Standard CNN (Classic Deep CNN)** | **99.01%** | **0.0312** | 431,914 | 5.01 MB | 0.180 ms | 99.9 s | **0.99%** (99 mẫu) |
-| 🥈 **2** | **Mini-ResNet (Residual CNN)** | **98.11%** | 0.0587 | 82,058 | 1.04 MB | 0.240 ms | 161.6 s | 1.89% (189 mẫu) |
-| 🥉 **3** | **MLP Baseline (Fully-Connected)** | **97.78%** | 0.0702 | 236,682 | 2.75 MB | **0.099 ms** | **7.2 s** | 2.22% (222 mẫu) |
+|  **1** | **Standard CNN (Classic Deep CNN)** | **99.01%** | **0.0312** | 431,914 | 5.01 MB | 0.180 ms | 99.9 s | **0.99%** (99 mẫu) |
+|  **2** | **Mini-ResNet (Residual CNN)** | **98.11%** | 0.0587 | 82,058 | 1.04 MB | 0.240 ms | 161.6 s | 1.89% (189 mẫu) |
+|  **3** | **MLP Baseline (Fully-Connected)** | **97.78%** | 0.0702 | 236,682 | 2.75 MB | **0.099 ms** | **7.2 s** | 2.22% (222 mẫu) |
 | 4 | **Mini Vision Transformer (ViT)** | **96.52%** | 0.1052 | 71,818 | 0.95 MB | 0.304 ms | 81.4 s | 3.48% (348 mẫu) |
 | 5 | **Mobile-Separable CNN (MobileNet)** | **95.94%** | 0.1206 | **21,418** | **0.31 MB** | 0.175 ms | 169.7 s | 4.06% (406 mẫu) |
 
-### 🔍 Đánh Giá Chuyên Sâu Từng Trường Phái:
+###  Đánh Giá Chuyên Sâu Từng Trường Phái:
 * **Standard CNN (Quán quân độ chính xác - 99.01%):** Sử dụng các khối tích chập $(3 \times 3)$ kết hợp Batch Normalization và Dropout, khai thác tối đa đặc trưng cục bộ (local patterns) và chia sẻ trọng số. Phù hợp nhất cho hệ thống máy chủ xử lý tài liệu tài chính, ngân hàng.
 * **Mini-ResNet (Tối ưu gradient - 98.11%):** Sử dụng đường tắt **Skip / Shortcut Connection** ($F(x) + x$), giải quyết triệt để hiện tượng triệt tiêu đạo hàm. Số tham số chỉ bằng $1/5$ so với Standard CNN mà vẫn duy trì độ chính xác $>98\%$.
 * **Mobile-Separable CNN (Vô địch về độ nhẹ - 0.31 MB):** Thay thế tích chập chuẩn bằng **Depthwise Separable Convolution** kết hợp `GlobalAveragePooling2D`. Dung lượng siêu nhỏ (**0.31 MB**) và chỉ **21.418 tham số**, là ứng viên hàng đầu để nhúng vào thiết bị IoT (Raspberry Pi, ESP32) hoặc chạy Client-side qua TensorFlow.js/ONNX Runtime.
@@ -88,15 +88,15 @@ Dữ liệu thực nghiệm thu được từ quá trình huấn luyện và đ�
 
 ---
 
-## 🏛️ Kiến Trúc Hệ Thống
+##  Kiến Trúc Hệ Thống
 
 ```mermaid
 flowchart TB
-    subgraph ClientLayer["🖥️ Frontend Client (SPA - Dark Glassmorphism)"]
-        UI1["✍️ Canvas Studio (Bézier Curves)"]
-        UI2["📷 OCR Scanner (Drag & Drop)"]
-        UI3["📹 Live Webcam Stream"]
-        UI4["📊 Benchmark Dashboard (Chart.js)"]
+    subgraph ClientLayer[" Frontend Client (SPA - Dark Glassmorphism)"]
+        UI1[" Canvas Studio (Bézier Curves)"]
+        UI2[" OCR Scanner (Drag & Drop)"]
+        UI3[" Live Webcam Stream"]
+        UI4[" Benchmark Dashboard (Chart.js)"]
     end
 
     subgraph Gateway["⚡ API Gateway (FastAPI / Uvicorn ASGI Server - Port 8080)"]
@@ -113,7 +113,7 @@ flowchart TB
         CV5["Min-Max Normalization [0.0, 1.0]"]
     end
 
-    subgraph InferenceEngine["🧠 Model Registry & Deep Learning Engine"]
+    subgraph InferenceEngine[" Model Registry & Deep Learning Engine"]
         M1["Standard CNN (99.01%)"]
         M2["Mini-ResNet (98.11%)"]
         M3["Mobile-Separable CNN (95.94%)"]
@@ -129,7 +129,7 @@ flowchart TB
 
 ---
 
-## 📂 Cấu Trúc Thư Mục Dự Án
+##  Cấu Trúc Thư Mục Dự Án
 
 ```
 vision/
@@ -183,7 +183,7 @@ vision/
 
 ---
 
-## 🚀 Hướng Dẫn Cài Đặt & Khởi Chạy
+##  Hướng Dẫn Cài Đặt & Khởi Chạy
 
 ### Cách 1: Khởi động 1-Click trên Windows (Nhanh nhất)
 Nhấp đúp chuột vào file:
@@ -232,7 +232,7 @@ Truy cập ứng dụng ngay tại: `http://localhost:8080`.
 
 ---
 
-## 🌐 Địa Chỉ Truy Cập Dịch Vụ
+##  Địa Chỉ Truy Cập Dịch Vụ
 
 Khi máy chủ khởi động thành công:
 * **Giao diện Web Ứng dụng (UI):** [http://localhost:8080/](http://localhost:8080/)
@@ -275,7 +275,7 @@ curl -X POST "http://localhost:8080/api/scan/image" \
 
 ---
 
-## 🛠️ Công Nghệ & Thư Viện Sử Dụng
+##  Công Nghệ & Thư Viện Sử Dụng
 
 | Tầng Hệ Thống | Công Nghệ / Thư Viện | Mục Đích Sử Dụng |
 | :--- | :--- | :--- |
@@ -289,7 +289,7 @@ curl -X POST "http://localhost:8080/api/scan/image" \
 
 ---
 
-## 📜 Giấy Phép & Đóng Góp
+##  Giấy Phép & Đóng Góp
 
 * Dự án được phân phối dưới giấy phép **[MIT License](LICENSE)**. Bạn hoàn toàn có thể tự do sử dụng, chỉnh sửa và tích hợp vào các đồ án, đề tài nghiên cứu hoặc sản phẩm thương mại.
 * Mọi đóng góp (Pull Request, Báo cáo lỗi Issue) đều được hoan nghênh nồng nhiệt!
